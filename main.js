@@ -85,3 +85,18 @@ function showResult() {
         isDivisionActive = false;
     }
 }
+
+const popUp = document.getElementById('popup');
+const alertPopUp = document.querySelector('.paragraph');
+const container = document.querySelector('.container');
+const closeModal = document.querySelector('.closeModal');
+
+alertPopUp.addEventListener('click', function() {
+    popUp.classList.toggle('hidden');
+    container.classList.toggle('opacity');
+})
+
+closeModal.addEventListener('click', function() {
+    popUp.classList.toggle('hidden');
+    container.classList.toggle('opacity');
+})

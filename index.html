@@ -7,75 +7,87 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="text">
-        <h1 class="header-text">Simple Calculator</h1>
-        <a href="#" class="paragraph">How it works?</a>
+    <div class="container">
+        <div class="text">
+            <h1 class="header-text">Simple Calculator</h1>
+            <a href="#" class="paragraph">How it works?</a>
+        </div>
+        <div class="calculator">
+            <input value="0" type="text" class="input" id="input" disabled>
+            <table class="calculator-table">
+                <tr class="calculation-buttons">
+                    <td class="clear">
+                        <button class="btn">C</button>
+                    </td>
+                    <td class="division">
+                        <button class="btn operation">/</button>
+                    </td>
+                    <td class="multiplication">
+                        <button class="btn operation">*</button>
+                    </td>
+                    <td class="subtraction">
+                        <button class="btn btn__minus operation">-</button>
+                    </td>
+                </tr>
+                <tr class="numbers">
+                    <td class="seven">
+                        <button class="btn number" id="7">7</button>
+                    </td>
+                    <td class="eight">
+                        <button class="btn number" id="8">8</button>
+                    </td>
+                    <td class="nine">
+                        <button class="btn number" id="9">9</button>
+                    </td>
+                    <td rowspan="2" class="addition">
+                        <button class="btn btn__plus operation">+</button>
+                    </td>
+                </tr>
+                <tr class="numbers">
+                    <td class="four">
+                        <button class="btn number" id="4">4</button>
+                    </td>
+                    <td class="five">
+                        <button class="btn number" id="5">5</button>
+                    </td>
+                    <td class="six">
+                        <button class="btn number" id="6">6</button>
+                    </td>
+                </tr>
+                <tr class="numbers">
+                    <td class="one">
+                        <button class="btn number" id="1">1</button>
+                    </td>
+                    <td class="two">
+                        <button class="btn number" id="2">2</button>
+                    </td>
+                    <td class="three">
+                        <button class="btn number" id="3">3</button>
+                    </td>
+                    <td rowspan="2" class="result">
+                        <button class="btn btn__result">=</button>
+                    </td>
+                </tr>
+                <tr class="numbers">
+                    <td colspan="2" class="zero">
+                        <button class="btn number" id="0">0</button>
+                    </td>
+                    <td class="point">
+                        <button class="btn number">.</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class="calculator">
-        <input value="0" type="text" class="input" id="input" disabled>
-        <table class="calculator-table">
-            <tr class="calculation-buttons">
-                <td class="clear">
-                    <button class="btn">C</button>
-                </td>
-                <td class="division">
-                    <button class="btn operation">/</button>
-                </td>
-                <td class="multiplication">
-                    <button class="btn operation">*</button>
-                </td>
-                <td class="subtraction">
-                    <button class="btn btn__minus operation">-</button>
-                </td>
-            </tr>
-            <tr class="numbers">
-                <td class="seven">
-                    <button class="btn number" id="7">7</button>
-                </td>
-                <td class="eight">
-                    <button class="btn number" id="8">8</button>
-                </td>
-                <td class="nine">
-                    <button class="btn number" id="9">9</button>
-                </td>
-                <td rowspan="2" class="addition">
-                    <button class="btn btn__plus operation">+</button>
-                </td>
-            </tr>
-            <tr class="numbers">
-                <td class="four">
-                    <button class="btn number" id="4">4</button>
-                </td>
-                <td class="five">
-                    <button class="btn number" id="5">5</button>
-                </td>
-                <td class="six">
-                    <button class="btn number" id="6">6</button>
-                </td>
-            </tr>
-            <tr class="numbers">
-                <td class="one">
-                    <button class="btn number" id="1">1</button>
-                </td>
-                <td class="two">
-                    <button class="btn number" id="2">2</button>
-                </td>
-                <td class="three">
-                    <button class="btn number" id="3">3</button>
-                </td>
-                <td rowspan="2" class="result">
-                    <button class="btn btn__result">=</button>
-                </td>
-            </tr>
-            <tr class="numbers">
-                <td colspan="2" class="zero">
-                    <button class="btn number" id="0">0</button>
-                </td>
-                <td class="point">
-                    <button class="btn number">.</button>
-                </td>
-            </tr>
-        </table>
+    <div id="popup" class="popup hidden">
+        <div class="closeModal"></div>
+        <h1 class="popup__header">Instructions</h1>
+        <p>Russian</p>
+        <ul class="popup__inner-text">
+            <li>Если Вы используете ПК, все операции следует производить мышью, не используйте клавиатуру.</li>
+            <li>Максимальное число, которое вмещает табло — девятизначное.</li>
+            <li>Для того, чтобы калькулятор произвел вычисление, следует нажимать на равно после каждой операции.</li>
+        </ul>
     </div>
     <script src="main.js"></script>
 </body>

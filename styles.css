@@ -10,6 +10,7 @@ table, th, td {
 
 body {
     background-color: rgb(100, 180, 194);
+    position: relative;
 }
 
 .text {
@@ -71,4 +72,107 @@ body {
 .operation:focus {
     background-color: rgb(248, 172, 30);
     color: #fff;
+}
+
+.popup {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 10%;
+    left: 34%;
+    max-width: 500px;
+    min-height: 600px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.popup > p {
+    text-align: center;
+}
+
+.popup__header {
+    text-align: center;
+    padding: 30px 0 40px 0;
+}
+
+.popup__inner-text {
+    padding: 30px;
+}
+
+.popup__inner-text > li {
+    padding: 8px;
+}
+
+.opacity {
+    height: 100vh;
+    background-color: black;
+    opacity: .6;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.closeModal {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	width: 24px;
+	height: 24px;
+	opacity: 0.2;
+	cursor: pointer;
+    transition: opacity ease 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.closeModal::before,
+.closeModal::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.closeModal::before {
+	transform: rotate(45deg);
+}
+
+.closeModal::after {
+	transform: rotate(-45deg);
+}
+
+@media (max-width: 490px){
+    .popup {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media (min-width: 490px) and (max-width: 560px){
+    .popup {
+        top: 30px;
+        left: 20px;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 760px){
+    .popup {
+        top: 30px;
+        left: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+    .popup {
+        top: 30px;
+        left: 150px;
+    }
 }
